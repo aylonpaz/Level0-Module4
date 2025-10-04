@@ -15,14 +15,29 @@ public class RedSquare {
 	
 	public static void main(String[] args) {
 		
-		boolean isRed = false;
-		boolean isSquare = true;
+		boolean isRed = true;
+		boolean isSquare = false;
 		
 		// The && shown here means that both booleans must be true for the 
 		// entire if statement to be true. It is referred to as the "and"
 		// operator. 
 		if(isRed && isSquare) {
 			drawRedSquare();
+		}
+		else if(isRed == false && isSquare == true) {
+			drawBlueSquare();
+		}
+		else if(isRed == true) {
+			drawRedTriangle();
+		}
+		else if(isRed == false && isSquare == false) {
+			drawBlueTriangle();
+		}
+		else if(drewBlueTriangle == true) {
+			JOptionPane.showMessageDialog(null, "You drew a triangle!");
+		}
+		else if(drewRedTriangle == true) {
+			JOptionPane.showMessageDialog(null, "You drew a triangle!");
 		}
 		else {
             JOptionPane.showMessageDialog(null, "No shape was drawn!");
