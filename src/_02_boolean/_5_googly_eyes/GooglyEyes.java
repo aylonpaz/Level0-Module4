@@ -11,9 +11,10 @@ import processing.core.PImage;
  *    top level of this module. It can be anything as long as it has large eyes!
  * 
  * 2. Declare a variable for the image:
- *    PImage face;
- * 
- * 3. In your setup() method, import your image using the following code:
+ */  
+ 
+ 
+ /* 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");
  * 
  * 4. Resize your face image to the size of the window using the resize() method.
@@ -41,7 +42,8 @@ public class GooglyEyes extends PApplet {
     static final int HEIGHT = 600;
     
     PImage face;
-    
+    int lastX = 367;
+    int lastY = 119;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -49,14 +51,29 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-
+    	face = loadImage("images/Shedletsky.png");
+    	face.resize(WIDTH, HEIGHT);
     }
 
     @Override
     public void draw() {
-
+    	background(face);
+    	if(mousePressed){
+    		System.out.println(mouseX + " "+ mouseY);
+    	}
+    	fill(255,255,255);
+    	ellipse(367,119,40,40);
+    	ellipse(406,119,40,40);
+    	fill(0,0,0);
+    	if(Math.sqrt(Math.pow(mouseX-367,2)+Math.pow(mouseY-119, 2)) <13) {
+    	ellipse(mouseX,mouseY,20,20);
+    	ellipse(mouseX +43,mouseY + 2,20,20);
+    	}else {
+    		
+    	}
     }
-
+//370,112
+//413,110
     static public void main(String[] args) {
         PApplet.main(GooglyEyes.class.getName());
     }
