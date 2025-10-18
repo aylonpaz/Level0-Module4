@@ -68,8 +68,12 @@ public class GooglyEyes extends PApplet {
     	if(Math.sqrt(Math.pow(mouseX-367,2)+Math.pow(mouseY-119, 2)) <13) {
     	ellipse(mouseX,mouseY,20,20);
     	ellipse(mouseX +43,mouseY + 2,20,20);
+    	lastX = mouseX;
+    	lastY=mouseY;
     	}else {
-    		
+   
+    		ellipse(lastX,lastY,20,20);
+    		ellipse(lastX+43,lastY+2,20,20);
     	}
     }
 //370,112
