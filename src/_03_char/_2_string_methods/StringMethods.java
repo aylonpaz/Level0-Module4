@@ -17,10 +17,10 @@ public class StringMethods {
 		
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
+
 		for(int w = 0; w <7; w +=1) {
-			int r = 1;
-			System.out.println(iDKWhatImDoingRn.charAt(r));
-			r +=1;
+		
+			System.out.println(iDKWhatImDoingRn.charAt(w));
 		}
 		
 		// 5. Pick a char inside your String, and use a loop to determine
